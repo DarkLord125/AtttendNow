@@ -2,7 +2,7 @@
 
 Our web-based attendance system utilizes facial recognition technology to automate attendance-taking and ensure accurate records.
 
-## Details
+## Details about the Project
 In our backend system, we utilize the face_recognition library to identify the images of students, enabling attendance to be taken by uploading a group photo. The library recognizes the faces in the photo, retrieves their respective details, and presents them on the website. Additionally, the system records this information in the specific classroom's database, providing an accurate and efficient means of tracking attendance.
 
 ## Features
