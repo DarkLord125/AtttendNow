@@ -16,29 +16,34 @@ export const tokensDark = {
         1000: "#000000", // manually adjusted
     },
     primary: {
-        // blue
-        100: "#d3d4de",
-        200: "#a6a9be",
-        300: "#7a7f9d",
-        400: "#4d547d",
-        500: "#21295c",
-        600: "#191F45", // manually adjusted
-        700: "#141937",
-        800: "#0d1025",
-        900: "#070812",
+        // oxford-blue
+        DEFAULT: '#364153',
+        50: '#8C9BB4',
+        100: '#8091AC',
+        200: '#677B9C',
+        300: '#566884',
+        400: '#46546C',
+        500: '#364153',
+        600: '#202631',
+        700: '#0A0C0F',
+        800: '#000000',
+        900: '#000000',
+        950: '#000000',
     },
     secondary: {
-        // yellow
-        50: "#f0f0f0", // manually adjusted
-        100: "#fff6e0",
-        200: "#ffedc2",
-        300: "#ffe3a3",
-        400: "#ffda85",
-        500: "#ffd166",
-        600: "#cca752",
-        700: "#997d3d",
-        800: "#665429",
-        900: "#332a14",
+        // dodger blue
+            DEFAULT: '#605CFF',
+            50: '#FFFFFF',
+            100: '#FFFFFF',
+            200: '#D7D6FF',
+            300: '#B0AEFF',
+            400: '#8885FF',
+            500: '#605CFF',
+            600: '#2924FF',
+            700: '#0600EB',
+            800: '#0400B3',
+            900: '#03007B',
+            950: '#02005F',
     },
 };
 
@@ -69,12 +74,12 @@ export const themeSettings = (mode) => {
                     // palette values for dark mode
                     primary: {
                         ...tokensDark.primary,
-                        main: tokensDark.primary[400],
-                        light: tokensDark.primary[400],
+                        main: tokensDark.primary[500],
+                        light: tokensDark.primary[500],
                     },
                     secondary: {
                         ...tokensDark.secondary,
-                        main: tokensDark.secondary[300],
+                        main: tokensDark.secondary[500],
                     },
                     neutral: {
                         ...tokensDark.grey,

@@ -1,9 +1,34 @@
-import React from 'react'
-
+import React, {useState} from 'react'
+import { Box, useMediaQuery} from "@mui/material";
+import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Navbar from "components/Navbar";
+import Sidebar from "components/Sidebar";
+import { useAuthStore } from 'state/store'
 const Layout = () => {
-    return(
-        <div>Layout</div>
-    )
+    // for mobile devices
+    const isNonMobile = useMediaQuery("(min-width: 600px)");
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const { username } = useAuthStore(state => state.auth)
+    return (
+        <Box display={isNonMobile ? "flex" : "block" } width = "100%" height = "100%">
+            <Sidebar
+                user={username || {}}
+                isNonMobile={isNonMobile}
+                drawerWidth="250px"
+                isSidebarOpen={isSidebarOpen}
+                setIsSidebarOpen={setIsSidebarOpen}
+                />
+            <Box flexGrow={1}>
+                <Navbar
+                    user={username || {}}
+                    isSidebarOpen={isSidebarOpen}
+                    setIsSidebarOpen={setIsSidebarOpen}
+                />
+                <Outlet/>
+            </Box>
+         </Box>
+    );
 };
 
 export default Layout;
