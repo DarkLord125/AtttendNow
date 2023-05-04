@@ -1,6 +1,6 @@
 # AttendNow
 
-A web based attendance system using facial recognition.
+A Web based Attendance system using facial recognition.
 
 ## Features
 This application provides users with the following features:  
